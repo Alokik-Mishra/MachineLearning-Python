@@ -1,5 +1,5 @@
 # MachineLearning-Python
-Re-implementation of the original R Machine Learning repo in Python with streamlined code.
+Re-implementation of the original R Machine Learning repo in Python with streamlined code. Models are both coded from scratch AND implemented using scikit-learn.
 
 ## Overview
 1. [Course description](#desc)
@@ -38,3 +38,22 @@ ELEN 4903 was a 1 semester class on machine learning theory. The course was almo
 * Principal components analysis (PCA)
 * Markov chains
 * Hidden Markov models (HMMs) and the Kalman filter
+
+<a name="tech"></a>
+## Tech/framework
+All the coding has been done in python 3 using jupyter notebooks. The supplementary functions have been coded in .py files. All the models have been coded from scratch with some assistance from the scipy libraries. Matplotlib.pyplot is used for visualizations.
+
+Each assignment has a section at the bottom where the results from teh coded-from-scratch models are compared with results from the popular ML library scikit-learn.
+
+<a name="as1"></a>
+## Assignment 1
+The coding section of assignment one covered ridge regression and polynomial ridge regression.
+
+The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file with many of the functions can be seen [here](/P1/Utils/Funcs.py).
+
+
+<a name="as2"></a>
+## Assignment 2
+The coding section of assignment one covered naive bayes, k-nearest neighbors, and logistic regression.
+
+The jupyter notebook can be seen [here](/P2/Assignment2.ipynb) and the .py file with many of the functions can be seen [here](/P2/Utils/Funcs.py).

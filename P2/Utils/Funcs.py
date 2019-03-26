@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.special import expit
 
 def calc_bernoulli(X):
     
@@ -62,5 +63,58 @@ def K_nn(X_train, Y_train, X_test, k):
         out = np.random.choice([0,1])
     
     return(out)
+
+
+def logistic_fit(X_train, Y_train, Iter = 1000, method = "SDG"):
     
+    k = X_train.shape[1]
+    W = np.zeros(k).reshape(k,1)
+    liklihood = []
+    Accuracy_train = []
     
+    if method == "SDG":
+        
+        for i in range(Iter):
+            
+            eta = 1/(1e5*np.sqrt(i+2))
+            term1 = expit(np.multiply(Y_train, X_train.dot(W)))
+            liklihood.append(np.sum(np.log(term1 + 1e-10)))
+            term2 = X_train.T.dot(np.multiply(Y_train,1-term1))
+
+            W += term2*eta
+            pred_y = np.sign(X_train.dot(W))
+            acc = (sum(pred_y == Y_train))/len(pred_y)
+            Accuracy_train.append(acc)
+            
+    elif method == "Newton":
+        
+        for i in range(Iter):
+            
+            eta = 1/(np.sqrt(i+2))
+            term1 = expit(np.multiply(Y_train, X_train.dot(W)))
+            liklihood.append(np.sum(np.log(term1 + 1e-10)))
+            dy =  X_train.T.dot(np.multiply(Y_train,1-term1))
+            dy_2 = -np.multiply(np.multiply(term1,1-term1),X_train).T.dot(X_train)
+            
+            W -= np.linalg.inv(dy_2).dot(dy) * eta
+            pred_y = np.sign(X_train.dot(W))
+            acc = (np.sum(pred_y == Y_train))/len(pred_y)
+            Accuracy_train.append(acc)
+    
+    return((W, Accuracy_train, liklihood))
+       
+def logistic_predict(X_test, Y_test, fit = False, W = None, X_train = None, Y_train = None, Iter = 1000, method = "SDG"):
+    
+    Out = []
+    
+    if fit:
+        W = logistic_fit(X_train = X_train, Y_train = Y_train, Iter = Iter, method = method)[0]
+        pred_y = np.sign(X_test.dot(W))
+        acc = (np.sum(pred_y == Y_test))/len(pred_y)
+        Out = acc[-1]
+    else :
+        pred_y = np.sign(X_test.dot(W))
+        acc = (np.sum(pred_y == Y_test))/len(pred_y)
+        Out = acc
+        
+    return(acc)

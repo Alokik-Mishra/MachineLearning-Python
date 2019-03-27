@@ -49,7 +49,7 @@ Each assignment has a section at the bottom where the results from teh coded-fro
 ## Assignment 1
 The coding section of assignment one focused on regression and covered ridge regression and polynomial ridge regression.
 
-The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file with many of the functions can be seen [here](/P1/Utils/Funcs.py), the OOC file can be seen [here](/P1/Utils/Funcs.py).
+The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file with many of the functions can be seen [here](/P1/Utils/Funcs.py), the OOC file can be seen [here](/P1/Utils/OOC.py).
 
 
 <a name="as2"></a>

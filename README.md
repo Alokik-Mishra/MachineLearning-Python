@@ -62,6 +62,8 @@ The jupyter notebook can be seen [here](/P2/Assignment2.ipynb) and the .py file 
 ## Assignment 3
 The coding section of assignment three focuses on feature expansion kernal methods and ensemble methods. The Gaussian process and Adaboost boosting algorithms are covered.
 
+The jupyter notebook can be seen [here](/P3/Assignment3.ipynb) and the .py file with many of the functions can be seen [here](/P3/Utils/Funcs.py).
+
 <a name="as4"></a>
 ## Assignment 4
 The coding section of assignment four changes the attention to focus on unsupervised methods, I cover k-means clustering and matrix factorization (reccomender system).

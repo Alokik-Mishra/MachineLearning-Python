@@ -47,13 +47,25 @@ Each assignment has a section at the bottom where the results from teh coded-fro
 
 <a name="as1"></a>
 ## Assignment 1
-The coding section of assignment one covered ridge regression and polynomial ridge regression.
+The coding section of assignment one focused on regression and covered ridge regression and polynomial ridge regression.
 
 The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file with many of the functions can be seen [here](/P1/Utils/Funcs.py).
 
 
 <a name="as2"></a>
 ## Assignment 2
-The coding section of assignment one covered naive bayes, k-nearest neighbors, and logistic regression.
+The coding section of assignment two focused on classification and covered naive bayes, k-nearest neighbors, and logistic regression.
 
 The jupyter notebook can be seen [here](/P2/Assignment2.ipynb) and the .py file with many of the functions can be seen [here](/P2/Utils/Funcs.py).
+
+<a name="as3"></a>
+## Assignment 3
+The coding section of assignment three focuses on feature expansion kernal methods and ensemble methods. The Gaussian process and Adaboost boosting algorithms are covered.
+
+<a name="as4"></a>
+## Assignment 4
+The coding section of assignment four changes the attention to focus on unsupervised methods, I cover k-means clustering and matrix factorization (reccomender system).
+
+<a name="as5"></a>
+## Assignment 5
+The coding section of assignment five focuses on temporal and semi-supervised methods. I cover Markov chains and non-negative matrix factorisation (NMF).

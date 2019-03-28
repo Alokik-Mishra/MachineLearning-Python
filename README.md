@@ -1,5 +1,5 @@
 # MachineLearning-Python
-Re-implementation of the original R Machine Learning repo in Python with streamlined code. Models are both coded from scratch AND implemented using scikit-learn.
+Re-implementation of the original R Machine Learning repo in Python with streamlined code. Models are both coded from scratch AND implemented using scikit-learn. Each assignment also has an "Object-oriented code" version, which allows for an easy comparision between the custom model and the scikit-learn version.
 
 ## Overview
 1. [Course description](#desc)
@@ -49,7 +49,7 @@ Each assignment has a section at the bottom where the results from teh coded-fro
 ## Assignment 1
 The coding section of assignment one focused on regression and covered ridge regression and polynomial ridge regression.
 
-The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file with many of the functions can be seen [here](/P1/Utils/Funcs.py).
+The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file with many of the functions can be seen [here](/P1/Utils/Funcs.py), the OOC file can be seen [here](/P1/Utils/OOC.py).
 
 
 <a name="as2"></a>

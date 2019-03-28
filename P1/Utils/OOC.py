@@ -14,6 +14,8 @@ class Assignment1:
     def __init__(self, name, data):
         self.name = name
         self.data = data
+        self.decomposed = False
+        self.poly = 1
         
     def make_array(self):
         """
@@ -45,11 +47,13 @@ class Assignment1:
         """
         X_train = self.x_train
         self.X_u, self.X_s, self.X_v  = np.linalg.svd(X_train)
+        self.decomposed = True
         
     def poly_expand(self, p):
-        '''
+        """
         Performs polynomial expansion on the training
-        and testing features. Cross-terms are not included.'''
+        and testing features. Cross-terms are not included.
+        """        
         X = self.x_train.copy()
         X_main = X.copy()
         if p > 1:
@@ -65,6 +69,7 @@ class Assignment1:
                 X_j = np.power(X_main[:,:6], j)
                 X = np.hstack((X_j, X))
         self.x_test = X
+        self.poly = p
         
 class RidgeReg(Assignment1):
     """
@@ -72,8 +77,8 @@ class RidgeReg(Assignment1):
     Used for fitting and predicting ridge regression on a training and testing set.
     
     use_custom (default = True): when this is on, the model will be 
-        implmented from scratch. when this is off it will use scikit-learn."""
-    
+        implmented from scratch. when this is off it will use scikit-learn.
+    """    
     def __init__(self, name, data, use_custom = True):
         self.use_custom = use_custom
         self.name = name
@@ -117,11 +122,11 @@ class RidgeReg(Assignment1):
             return W
     
     def df_lambda(self, use_stored = True, lam = None):
-        '''
+        """
         Computes df lambda based on value of lambda.
         Only works if using stored estimates from fit, otherwise
         is empty.
-        '''
+        """
         if use_stored:
             lam = self.lam
             s = self.X_s
@@ -131,12 +136,12 @@ class RidgeReg(Assignment1):
             pass
     
     def predict(self, use_stored = True, lam = None, x_train = None, y_train = None):
-        '''
+        """
         Produces the predicted labels (y) based on the
         testing set. If use_stored is on, the coefficients are pulled
         from the fit method. If it is off, new weights are computed using the 
         datasets entered as function attributes.
-        '''
+        """
         if self.use_custom:
             if use_stored:
                 lam = self.lam

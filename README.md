@@ -56,7 +56,7 @@ The jupyter notebook can be seen [here](/P1/Assignment1.ipynb) and the .py file 
 ## Assignment 2
 The coding section of assignment two focused on classification and covered naive bayes, k-nearest neighbors, and logistic regression.
 
-The jupyter notebook can be seen [here](/P2/Assignment2.ipynb) and the .py file with many of the functions can be seen [here](/P2/Utils/Funcs.py).
+The jupyter notebook can be seen [here](/P2/Assignment2.ipynb) and the .py file with many of the functions can be seen [here](/P2/Utils/Funcs.py), the OOC file can be seen [here](/P2/Utils/OOC.py).
 
 <a name="as3"></a>
 ## Assignment 3
